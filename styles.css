@@ -1,0 +1,106 @@
+body {
+  font-family: arial;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 300px auto;
+  grid-template-areas: "header header"
+  "sidebar content"
+  "gray gray"
+  "cards cards"
+  "footer footer";
+  grid-template-rows: 180px auto 175px 360px 180px;
+  margin: 0;
+}
+
+.header {
+  background: #dcdcdc;
+  font-size: 60px;
+  font-weight: bold;
+  padding: 60px;
+  grid-area: header;
+  max-width: 100%;
+}
+
+.navigation {
+  min-width: 300px;
+  grid-area: sidebar;
+  background: #e8e8e8;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.navigation ul {
+  list-style: none;
+}
+
+.navigation li {
+  padding: 10px;
+}
+
+.content {
+  grid-area: content;
+  padding: 50px;
+  line-height: 2;
+  max-width: 900px;
+}
+
+.gray {
+  grid-area: gray;
+  background: #dcdcdc;
+  max-height: 200px;
+}
+
+.wrapper {
+  display: flex;
+  margin: auto;
+  padding: 30px;
+  position: absolute;
+  margin-top: 440px;
+}
+
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border: 5px solid #989898;
+  padding: 20px;
+  margin-right: 20px;
+}
+
+.card:last-child {
+  margin-right: 0;
+}
+
+.card img {
+  width: 100%;
+}
+
+.readmore {
+  align-self: flex-end;
+  margin-top: auto;
+  padding: 5px;
+}
+
+.readmore button {
+  background: black;
+  width: 250px;
+  border: none;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.footer {
+  background: black;
+  color: white;
+  font-size: 50px;
+  padding: 60px;
+  font-weight: bold;
+  grid-area: footer;
+  max-width: 100%;
+}
